@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  todolist.api:
+    image: ${REGISTRY-}todolistapi
+    build:
+      context: .
+      dockerfile: src/TodoList.API/Dockerfile
+  db:
+    image: postgres
+    restart: always
